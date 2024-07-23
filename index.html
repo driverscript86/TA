@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello World Animation</title>
+<style>
+    .container {
+        width: 100%;
+        height: 200px;
+        background-color: black;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        font-weight: bold;
+        color: greenyellow; /* warna teks hijau menyala kuning */
+        white-space: nowrap; /* agar teks tidak pindah baris */
+        animation: animate 10s linear infinite; /* durasi animasi dan efek */
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="text">Hello World!</div>
+</div>
+
+</body>
+</html>
